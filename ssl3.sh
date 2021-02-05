@@ -125,8 +125,8 @@ openssl x509 -noout -fingerprint -sha1 -inform pem -in "$VAR002" >> "$VARHASH".0
 ;;
 
 *) 
-echo "Usage : $0 read fileName <such as pfx cert crt pem key csr>  => installes the required dependencies"
-echo "Usage : $0 modulus fileName <such as pfx cert crt pem key csr>  => installes the required dependencies"
+echo "Usage : $0 read fileName <such as pfx cert crt pem key csr>"
+echo "Usage : $0 modulus fileName <such as pfx cert crt pem key csr>"
 echo "Usage : $0 exportpfx fileName  => exports PFX to abcd.cert and abcd.key"
 echo "Usage : $0 createpfx keyFile certFile => create a abcd.pfx"
 echo "Usage : $0 checkca <CA-file> <Cert-file> check the CA cert matching"
