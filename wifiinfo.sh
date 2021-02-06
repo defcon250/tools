@@ -15,7 +15,6 @@ echo ""
 
 
 
-echo $REMOTEVER
 
 echo "---"
 if [[ $REMOTEVER != 1.1 ]]; then echo "update $REMOTEVER is available for $0"; fi
