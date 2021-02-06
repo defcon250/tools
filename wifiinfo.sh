@@ -1,5 +1,5 @@
 #!/bin/bash
-ver=1.0
+scriptver=1.0
 iw $(iw dev | grep -ioP 'phy#\w*|interface\s\w*'  | grep -i "$1" -B1  | grep -i phy | sed 's/#//g') info | grep -i mbps | grep -iv "*" | sort -u | xargs -l
 echo ""
 VAR_CHANNELS=`iw $(iw dev | grep -ioP 'phy#\w*|interface\s\w*'  | grep -i "$1" -B1  | grep -i phy | sed 's/#//g') info | grep -i Mhz | grep -iv 'radar' | grep -iv disabled | grep -i short  -A 50 | awk -F'[' '{print $2}' | awk -F ']' '{print $1}' | xargs | tr -s ' ' ','`
