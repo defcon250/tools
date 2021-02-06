@@ -1,6 +1,5 @@
 #!/bin/bash
-LOCALVER=1.0
-REMOTEVER=$(curl -ks  https://github.com/defcon250/tools/blob/main/wifiinfo.sh | grep -m1 -ioP 'LOCALVER=\w*.?\w*.?\w*.?\w*' | awk -F'=' '{print $2}' | awk -F'<' '{print $1}')
+LOCALVER=0.0
 
 
 
@@ -17,5 +16,6 @@ echo ""
 
 
 echo "---"
-if [[ $LOCALVER != $REMOTEVER ]]; then echo "update $REMOTEVER is available for $0"; fi | grep -iP '[0-9]' || echo ""
+REMOTEVER=$(curl -ks  https://github.com/defcon250/tools/blob/main/wifiinfo.sh | grep -m1 -ioP 'LOCALVER=\w*.?\w*.?\w*.?\w*' | awk -F'=' '{print $2}' | awk -F'<' '{print $1}')
+if [[ $LOCALVER != $REMOTEVER ]]; then echo -e "\033[1;31mupdate $REMOTEVER is avaialble for $0\033[m"; fi | grep -iP '[0-9]' || echo ""
 
