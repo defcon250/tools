@@ -1,5 +1,5 @@
 #!/bin/bash
-LOCALVER=0.0
+LOCALVER=1.0
 
 
 
