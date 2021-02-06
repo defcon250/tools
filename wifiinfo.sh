@@ -1,7 +1,6 @@
 #!/bin/bash
 LOCALVER=1.0
 REMOTEVER=$(curl -ks  https://github.com/defcon250/tools/blob/main/wifiinfo.sh | grep -ioP 'LOCALVER=\w*.?\w*' | awk -F'=' '{print $2}')
-if [[ $REMOTEVER != 1.0 ]]; then echo "update is available"; fi
 
 
 
@@ -13,3 +12,9 @@ echo "$1 `udevadm info /sys/class/net/$1 | grep -oiP 'driver=\w*' | sort -u`"
 echo "Supported Channels=$VAR_CHANNELS"
 echo ""
 
+
+
+
+
+echo " "
+if [[ $REMOTEVER != 1.0 ]]; then echo "update is available"; fi
