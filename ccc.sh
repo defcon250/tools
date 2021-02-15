@@ -1,7 +1,6 @@
 #!/bin/bash
 
-FNAME=`echo $0 | sed -e 's/\.//'`
-echo "$FNAME"
+FNAME=`echo $0 | awk -F'/' '{print $2}'`
 
 echo "---"
 LOCALVER=1.7
