@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#Uncomment these lines to receive updates info
 echo "---"
 LOCALVER=1.3
 WORKINGDIR=`pwd`
