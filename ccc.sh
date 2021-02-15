@@ -2,7 +2,7 @@
 
 #Uncomment these lines to receive updates info
 echo "---"
-LOCALVER=1.3
+LOCALVER=1.0
 WORKINGDIR=`pwd`
 REMOTEVER=$(curl -ksq https://raw.githubusercontent.com/defcon250/tools/main/ccc.sh?$(date +%s) 2>/dev/null | grep -m1 -ioP 'LOCALVER=\w*.?\w*.?\w*.?\w*' | awk -F'=' '{print $2}' | awk -F'<' '{print $1}')
 sleep 1
