@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "---"
-LOCALVER=1.4
+LOCALVER=1.5
 WORKINGDIR=`pwd`
 REMOTEVER=$(curl -H 'Cache-Control: no-cache' -ksq https://raw.githubusercontent.com/defcon250/tools/main/ccc.sh?$(date +%s) 2>/dev/null | grep -m1 'LOCALVER' | awk -F'=' '{print $2}')
 sleep 1
